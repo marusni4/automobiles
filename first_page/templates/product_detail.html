@@ -1,0 +1,15 @@
+{% extends 'main_page.html' %}
+{% block content %}
+<h1>Детализация товара</h1>
+    {% for m in shops %}
+        <p>{{ m.name }}</p>
+    {% endfor %}
+<div class = 'item_img'>
+    <img src="{{ product.image.url }}" alt="" class = "img">
+    <p>{{ product.title }}</p>
+    <p>{{ product.description }}</p>
+    <p>Цена: {{ product.price }}</p>
+
+</div>
+
+{% endblock %}
